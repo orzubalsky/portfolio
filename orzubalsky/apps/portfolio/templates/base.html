@@ -1,0 +1,45 @@
+{% load flatpages %}
+{% get_flatpages as flatpages %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>or zubalsky</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site.css" />
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div id="container">
+        {% url 'django.contrib.flatpages.views.flatpage' url='hello/' as about_url %}
+        {% url 'news-list' as news_url %}
+        {% url 'project-list' as projects_url %}        
+        <div id="header">
+            <a href="{% url 'home' %}">
+                <h1>or zubalsky</h1>
+            </a>
+            <ul id="navigation">
+                <li><a href="{{ about_url }}" {% if request.path == about_url %} class="active"{% endif %}>hello</a></li>
+                <li><a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>news</a></li>
+                <li><a href="{{ projects_url }}" {% if request.path == projects_url %} class="active"{% endif %}>projects</a></li>
+            </ul>
+            {% block project_list %}
+            <ul id="projects" class="list">
+                {% for project in projects %}
+                    {% url 'project-view' project_slug=project.slug as project_url %}
+                    <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a></li>
+                {% endfor %}
+            </ul>            
+            {% endblock project_list %}
+        </div>
+        <div id="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.js"></script>	
+    <script type="text/javascript" src="{{ STATIC_URL }}js/site.js"></script>
+    {% block extra_js %}{% endblock %}	
+</body>
+</html>

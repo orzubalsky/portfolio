@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul class="gallery images">
+    {% for image in project.images.all %}
+        <img src="{{ image.image.url }}" alt="image.name" />
+    {% endfor %}
+</ul>
+<h2>{{ project.name }}</h2>
+<div class="content">
+    {{ project.content|safe }}
+</div>
+
+{% if project.post_set.count > 0 %}
+<h3><strong>recent news</strong></h3>
+<div class="news recent">
+    {% for post in project.post_set.all %}
+    {% if forloop.counter < 5 %}
+    <h3><a href="{% url 'news-view' post_slug=post.slug %}">{{ post.name }}</a></h3>
+    <div class="content">
+        {{ post.content|safe }}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock content %}

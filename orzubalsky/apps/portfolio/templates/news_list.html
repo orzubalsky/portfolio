@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul id="news" class="list">
+    {% for post in posts %}
+        {% block post %}
+        <li>
+            <h3><a href="{% url 'news-view' post_slug=post.slug %}">{{ post.name }}</a></h3>
+            <div class="content">
+                {{ post.content|safe }}
+            </div>            
+        </li>
+        {% endblock post %}
+    {% endfor %}
+</ul>
+{% endblock content %}
