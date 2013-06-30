@@ -13,7 +13,7 @@
 <body>
     <div id="container">
         {% url 'django.contrib.flatpages.views.flatpage' url='hello/' as about_url %}
-        {% url 'news-list' as news_url %}
+        {% url 'post-list' as news_url %}
         {% url 'project-list' as projects_url %}        
         <div id="header">
             <a href="{% url 'home' %}">
@@ -27,7 +27,7 @@
             {% block project_list %}
             <ul id="projects" class="list">
                 {% for project in projects %}
-                    {% url 'project-view' project_slug=project.slug as project_url %}
+                    {% url 'project-detail' slug=project.slug as project_url %}
                     <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a></li>
                 {% endfor %}
             </ul>            

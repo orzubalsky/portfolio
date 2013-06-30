@@ -2,10 +2,10 @@
 
 {% block content %}
 <ul id="news" class="list">
-    {% for post in posts %}
+    {% for post in post_list %}
         {% block post %}
         <li>
-            <h3><a href="{% url 'news-view' post_slug=post.slug %}">{{ post.name }}</a></h3>
+            <h3><a href="{% url 'post-detail' slug=post.slug %}">{{ post.name }}</a></h3>
             <div class="content">
                 {{ post.content|safe }}
             </div>            

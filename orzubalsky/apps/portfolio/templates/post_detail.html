@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3><a href="{% url 'news-view' post_slug=post.slug %}">{{ post.name }}</a></h3>
+<h3><a href="{% url 'post-detail' slug=post.slug %}">{{ post.name }}</a></h3>
 <div class="content">
     {{ post.content|safe }}
 </div>
