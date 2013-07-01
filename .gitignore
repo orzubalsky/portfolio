@@ -10,7 +10,7 @@ eggs/
 parts/
 
 # ignore settings files:
-orzubalsky/settings/*.py
+orzubalsky/settings/development.py
 !orzubalsky/settings/__init__.py
 
 # ignore static files (for now):
