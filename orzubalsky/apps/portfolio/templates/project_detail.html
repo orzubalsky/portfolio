@@ -8,9 +8,29 @@
     {% endfor %}
 </ul>
 <h2>{{ project.name }}</h2>
+
+
+{% for subproject in project.project_set.all  %}
+    <h3><strong>{{ subproject.name }}</strong></h3>
+
+    {% if project.project_time %}
+    <h3>{{ subproject.project_time }}</h3>
+    {% endif %}
+
+    {% if project.medium %}
+    <h3>{{ subproject.medium }}</h3>
+    {% endif %}
+
+    {% if project.credits %}
+    <h3>{{ subproject.credits|safe }}</h3>
+    {% endif %}
+{% endfor %}
+
 <div class="content">
     {{ project.content|safe }}
 </div>
+
+
 
 {% if project.post_set.count > 0 %}
 <h3><strong>recent news</strong></h3>
