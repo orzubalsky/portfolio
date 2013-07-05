@@ -19,7 +19,7 @@ class ProjectAdmin(BaseAdmin):
     """
     fieldsets = (
         ('Info', {
-            'fields': ('name', 'parent', 'content', 'slug', 'year', 'project_time', 'medium', 'credits', 'is_active')
+            'fields': ('name', 'parent', 'content', 'slug', 'year', 'project_time', 'project_link', 'source_link', 'medium', 'credits', 'is_displayed', 'is_active')
         }),
         ('Media', {
             'fields': ('images', 'sounds', 'videos', 'vimeos', 'documents')

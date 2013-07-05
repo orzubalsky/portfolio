@@ -1,49 +1,15 @@
 {% extends "base.html" %}
 
+{% load render_project %}
+
 {% block content %}
 
-<ul class="gallery images">
-    {% for image in project.images.all %}
-        <img src="{{ image.image.url }}" alt="image.name" />
-    {% endfor %}
-</ul>
-<h2>{{ project.name }}</h2>
-
-
-{% for subproject in project.project_set.all  %}
-    <h3><strong>{{ subproject.name }}</strong></h3>
-
-    {% if project.project_time %}
-    <h3>{{ subproject.project_time }}</h3>
-    {% endif %}
-
-    {% if project.medium %}
-    <h3>{{ subproject.medium }}</h3>
-    {% endif %}
-
-    {% if project.credits %}
-    <h3>{{ subproject.credits|safe }}</h3>
-    {% endif %}
-{% endfor %}
-
-<div class="content">
-    {{ project.content|safe }}
-</div>
-
-
-
-{% if project.post_set.count > 0 %}
-<h3><strong>recent news</strong></h3>
-<div class="news recent">
-    {% for post in project.post_set.all %}
-    {% if forloop.counter < 5 %}
-    <h3><a href="{% url 'post-detail' slug=post.slug %}">{{ post.name }}</a></h3>
-    <div class="content">
-        {{ post.content|safe }}
-    </div>
-    {% endif %}
-    {% endfor %}
-</div>
+{% if project.is_displayed %}
+{% render_project project %}
 {% endif %}
+
+{% for sub_project in project.project_set.all  %}
+{% render_project sub_project %}
+{% endfor %}
 
 {% endblock content %}

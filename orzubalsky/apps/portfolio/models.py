@@ -22,7 +22,7 @@ class Base(Model):
     updated     = DateTimeField(editable=False)
     
     # Translators: Used to determine whether something is active in the front end or not.
-    is_active   = BooleanField(default=False)
+    is_active   = BooleanField(default=True)
     
     def save(self, *args, **kwargs):
         """ Save timezone-aware values for created and updated fields.
@@ -70,14 +70,17 @@ class Content(Base):
     class Meta:
         abstract = True
       
-    name        = CharField(max_length=140)
-    content     = HTMLField(null=True, blank=True)
-    slug        = SlugField(max_length=160)
-    images      = ManyToManyField(Image, blank=True, null=True)
-    sounds      = ManyToManyField(Sound, blank=True, null=True)
-    videos      = ManyToManyField(Video, blank=True, null=True)
-    vimeos      = ManyToManyField(Vimeo, blank=True, null=True)
-    documents   = ManyToManyField(Document, blank=True, null=True)       
+    name         = CharField(max_length=140)
+    content      = HTMLField(null=True, blank=True)
+    slug         = SlugField(max_length=160)
+    images       = ManyToManyField(Image, blank=True, null=True)
+    sounds       = ManyToManyField(Sound, blank=True, null=True)
+    videos       = ManyToManyField(Video, blank=True, null=True)
+    vimeos       = ManyToManyField(Vimeo, blank=True, null=True)
+    documents    = ManyToManyField(Document, blank=True, null=True)
+    source_link  = URLField(blank=True, null=True)
+    is_displayed = BooleanField(default=True)
+    
 
 
 class Project(Content):
@@ -90,8 +93,9 @@ class Project(Content):
     year         = DateField()
     project_time = CharField(max_length=140, blank=True, null=True) 
     medium       = CharField(max_length=255, blank=True, null=True)
-    credits      = HTMLField(blank=True, null=True)
+    credits      = TextField(blank=True, null=True)
     parent       = ForeignKey('self', null=True, blank=True)
+    project_link = URLField(blank=True, null=True)
 
 
 class Post(Content):
@@ -101,7 +105,6 @@ class Post(Content):
         ordering = ['created',]
     
     projects    = ManyToManyField(Project, blank=True, null=True)
-    source_link = URLField(blank=True, null=True)
 
 
 # signals are separated to signals.py 

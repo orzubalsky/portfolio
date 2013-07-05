@@ -15,24 +15,22 @@
         {% url 'django.contrib.flatpages.views.flatpage' url='hello/' as about_url %}
         {% url 'post-list' as news_url %}
         {% url 'project-list' as projects_url %}        
-        <div id="header">
-            <a href="{% url 'home' %}">
-                <h1>or zubalsky</h1>
-            </a>
-            <ul id="navigation">
-                <li><a href="{{ about_url }}" {% if request.path == about_url %} class="active"{% endif %}>hello</a></li>
-                <li><a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>news</a></li>
-                <li><a href="{{ projects_url }}" {% if request.path == projects_url %} class="active"{% endif %}>projects</a></li>
-            </ul>
-            {% block project_list %}
-            <ul id="projects" class="list">
-                {% for project in projects %}
-                    {% url 'project-detail' slug=project.slug as project_url %}
-                    <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a></li>
-                {% endfor %}
-            </ul>            
-            {% endblock project_list %}
+       
+        <div id="header" class="col_2">
+            <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
+            <div id="navigation">
+                <div class="circle">&nbsp;</div>
+                <div id="menu">
+                    {% for project in projects %}
+                        {% url 'project-detail' slug=project.slug as project_url %}
+                        <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a> -- 
+                    {% endfor %}
+                    <a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> -- 
+                    <a href="" {% if request.path == news_url %} class="active"{% endif %}>CV</a>
+                </div>
+            </div>
         </div>
+        
         <div id="main">
             {% block content %}
             {% endblock %}
