@@ -41,28 +41,32 @@ class Base(Model):
 
 class Image(Base):
     name  = CharField(max_length=140, null=True, blank=True)
-    image = FileBrowseField("Image", max_length=200, directory="images/")
+    media = FileBrowseField("Image", max_length=200, directory="images/")
     
 
 class Document(Base):
     name  = CharField(max_length=140, null=True, blank=True)    
-    document = FileBrowseField("PDF", max_length=200, directory="documents/")
+    media = FileBrowseField("PDF", max_length=200, directory="documents/")
 
 
 class Sound(Base):
     name  = CharField(max_length=140, null=True, blank=True)    
-    sound = FileBrowseField("Audio", max_length=200, directory="sounds/")
+    media = FileBrowseField("Audio", max_length=200, directory="sounds/")
 
 
 class Video(Base):
     name  = CharField(max_length=140, null=True, blank=True)    
-    video = FileBrowseField("Video", max_length=200, directory="video/")
+    media = FileBrowseField("Video", max_length=200, directory="video/")
 
 
 class Vimeo(Base):
     name     = CharField(max_length=140, null=True, blank=True)
-    embed    = TextField()
+    media    = TextField()
 
+
+class ContentManager(Manager):
+    def get_query_set(self):
+        return super(ContentManager, self).get_query_set().prefetch_related('images', 'sounds', 'videos', 'vimeos', 'documents')
 
 class Content(Base):
     """
@@ -80,8 +84,32 @@ class Content(Base):
     documents    = ManyToManyField(Document, blank=True, null=True)
     source_link  = URLField(blank=True, null=True)
     is_displayed = BooleanField(default=True)
-    
 
+    objects = ContentManager()
+
+    def media():
+        def fget(self):
+            return {'images'    : self.images, 
+                    'sounds'    : self.sounds, 
+                    'videos'    : self.videos,
+                    'vimeos'    : self.vimeos, 
+                    'documents' : self.documents, 
+                    }
+        return locals()
+
+    media = property(**media())
+    
+    def gallery_items(self):
+        items = []
+        for item_dictionary in self.media.values():
+            if item_dictionary.count() > 0:
+                for item in item_dictionary.all():
+                    items.append(item)
+        return items
+
+    def gallery_items_count(self):
+        return len(self.gallery_items())
+        
 
 class Project(Content):
     """
@@ -96,6 +124,8 @@ class Project(Content):
     credits      = TextField(blank=True, null=True)
     parent       = ForeignKey('self', null=True, blank=True)
     project_link = URLField(blank=True, null=True)
+    
+
 
 
 class Post(Content):
