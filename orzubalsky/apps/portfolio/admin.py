@@ -31,8 +31,8 @@ class ProjectAdmin(BaseAdmin):
             'fields': ('images', 'sounds', 'videos', 'vimeos', 'documents')
         }),
     )
-    list_display        = ('name', 'parent', 'is_active') 
-    list_editable       = ('is_active',)
+    list_display        = ('name', 'parent', 'position', 'is_active') 
+    list_editable       = ('position', 'is_active',)
     prepopulated_fields = {'slug': ('name',)}
 
 

@@ -124,8 +124,6 @@ class Project(Content):
     credits      = TextField(blank=True, null=True)
     parent       = ForeignKey('self', null=True, blank=True)
     project_link = URLField(blank=True, null=True)
-    
-
 
 
 class Post(Content):
