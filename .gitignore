@@ -11,10 +11,12 @@ parts/
 
 # ignore settings files:
 orzubalsky/settings/development.py
+orzubalsky/settings/server.py
 !orzubalsky/settings/__init__.py
 
 # ignore static files (for now):
 orzubalsky/static/
+orzubalsky/static/uploads
 
 # ignore uploaded files
 orzubalsky/media/uploads

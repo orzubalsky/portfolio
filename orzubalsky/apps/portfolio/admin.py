@@ -17,6 +17,12 @@ class BaseAdmin(admin.ModelAdmin):
 class ProjectAdmin(BaseAdmin):
     """
     """
+    class Media:
+        js = [
+                settings.STATIC_URL + 'tiny_mce/tiny_mce.js', 
+                settings.STATIC_URL + 'js/tinyMCE_admin.js',
+              ]
+            
     fieldsets = (
         ('Info', {
             'fields': ('name', 'parent', 'content', 'slug', 'year', 'project_time', 'project_link', 'source_link', 'medium', 'credits', 'is_displayed', 'is_active')
