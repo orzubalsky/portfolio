@@ -79,11 +79,10 @@ a.active {
     width: 690px;
 }
 #main {
-
-    
+    margin-top: 200px;
 }
 .project {
-    margin-top: 200px;
+    margin-bottom: 200px;
 }
 .project .content {
     

@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul id="news" class="list">
+<ul id="news" class="list col_2">
     {% for post in post_list %}
         {% block post %}
         <li>
             <h3><a href="{% url 'post-detail' slug=post.slug %}">{{ post.name }}</a></h3>
             <div class="content">
                 {{ post.content|safe }}
-            </div>            
+            </div>
         </li>
         {% endblock post %}
     {% endfor %}
