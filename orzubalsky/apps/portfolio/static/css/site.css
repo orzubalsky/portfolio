@@ -79,13 +79,15 @@ a.active,
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
     position: relative;
-    top: 8px;	
+    top: 11px;	
 }
 #navigation #menu {
     width: 690px;
+    line-height: 1.8;    
 }
 #navigation #menu a {
-    border-bottom: none;    
+    border-bottom: none;
+    padding-bottom: 1px;
 }
 #main {
     margin-top: 200px;
