@@ -124,6 +124,9 @@ a.active,
     position: absolute;
     right: 0;
 }
+.gallery .controls a {
+    border-bottom: none;
+}
 .description {
     width: 440px;
     position: relative;
