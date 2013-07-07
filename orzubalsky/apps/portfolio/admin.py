@@ -3,6 +3,7 @@ from django.utils.safestring import mark_safe
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.utils.safestring import mark_safe
+from django.forms.widgets import Textarea
 from django.contrib import admin
 from filebrowser.widgets import FileInput
 from portfolio.models import *
@@ -22,6 +23,9 @@ class ProjectAdmin(BaseAdmin):
                 settings.STATIC_URL + 'tiny_mce/tiny_mce.js', 
                 settings.STATIC_URL + 'js/tinyMCE_admin.js',
               ]
+        widgets = {
+                'credits': Textarea,
+                }              
             
     fieldsets = (
         ('Info', {
