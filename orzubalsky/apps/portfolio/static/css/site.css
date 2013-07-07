@@ -8,7 +8,7 @@ body {
 }
 a {
     cursor: pointer;
-    padding-bottom: 2px;
+    padding-bottom: 0px;
     border-bottom: 1px dashed black;
 }
 a, a:visited {
@@ -48,13 +48,9 @@ h1 {
 h1 a {
     border-bottom: none;
 }
-a.active {
-    border-bottom: 1px dashed black;    
-}
+a.active,
 #navigation #menu a.active {
-    border-bottom: none;
-    font-weight: bold;
-    text-transform: uppercase;    
+    border-bottom: 1px dashed black;
 }
 #container {
 }
