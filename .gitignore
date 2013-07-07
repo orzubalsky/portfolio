@@ -24,3 +24,5 @@ orzubalsky/media/uploads
 # ignore cache files
 tmp
 orzubalsky/tmp/
+
+data.json
