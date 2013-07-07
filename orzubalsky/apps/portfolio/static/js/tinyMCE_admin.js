@@ -26,7 +26,7 @@ tinyMCE.init({
     
     // Init
     mode : "exact",
-    elements : "id_content"
+    elements : "id_content, id_"
     theme: 'advanced',
     
     // General
