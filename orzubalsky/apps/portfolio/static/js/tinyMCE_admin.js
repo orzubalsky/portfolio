@@ -25,7 +25,7 @@ tinyMCE.init({
     // http://wiki.moxiecode.com/index.php/TinyMCE:Configuration
     
     // Init
-    mode: 'textareas',
+    // mode: 'textareas',
     theme: 'advanced',
     
     // General
