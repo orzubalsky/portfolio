@@ -16,7 +16,7 @@ class Base(Model):
         abstract = True
     
     # Translators:  Used wherever a created time stamp is needed.                   
-    created     = DateTimeField(editable=False)
+    created     = DateTimeField(editable=True)
     
     # Translators: Used wherever an update time stamp is needed.
     updated     = DateTimeField(editable=False)

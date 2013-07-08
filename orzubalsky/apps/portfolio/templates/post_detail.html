@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3><a href="{% url 'post-detail' slug=post.slug %}">{{ post.name }}</a></h3>
-<div class="content">
-    {{ post.content|safe }}
+<div id="news" class="list col_2">
+    {% block post %}
+    <div class="post_list">
+        <p class="date">{{ post.created|date:"M j, Y"}}</p>
+        <h3><strong>{{ post.name|title }}</strong></h3>
+        {% if post.source_link %}<br /><a href="{{ post.source_link }}" target="_blank" class="source_link">{{ post.source_link }}</a>{% endif %}
+        <div class="content">
+            {{ post.content|safe }}
+        </div>
+    </div>
+    {% endblock post %}
 </div>
 {% endblock content %}

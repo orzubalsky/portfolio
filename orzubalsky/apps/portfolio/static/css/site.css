@@ -151,3 +151,28 @@ a.active,
 .clear {
     clear: both;
 }
+.post_list {
+    margin-bottom: 40px;
+    position: relative;
+}
+.post_list .date {
+    display: inline;
+    margin-right: 20px;
+}
+.post_list h3 {
+    display: inline;    
+}
+.post_list .source_link {
+    margin-left: 104px;
+}
+.post_list .content {
+    margin-left: 104px;
+    margin-top: 10px;
+    border-bottom: 1px dashed;
+    padding-bottom: 20px;
+}
+.post_list .read_more {
+    border-bottom: none;
+    position: absolute;
+    right: 0;
+}

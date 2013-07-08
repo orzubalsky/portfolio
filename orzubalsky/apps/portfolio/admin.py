@@ -43,15 +43,16 @@ class ProjectAdmin(BaseAdmin):
 class PostAdmin(BaseAdmin):
     """
     """
-    list_display = ('name', 'created')
     fieldsets    = (
         ('Info', {
-            'fields': ('name', 'content', 'slug', 'source_link', 'projects', 'is_active')
+            'fields': ('name', 'content', 'slug', 'source_link', 'projects', 'created', 'is_active')
         }),
         ('Media', {
             'fields': ('images', 'sounds', 'videos', 'vimeos', 'documents')
         }),
     )
+    list_display        = ('name', 'created', 'is_active') 
+    list_editable       = ('created', 'is_active',)    
     prepopulated_fields = {'slug': ('name',)}
              
 
