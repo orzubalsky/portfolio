@@ -12,23 +12,25 @@
 </head>
 <body>
     <div id="container">
-        {% url 'django.contrib.flatpages.views.flatpage' url='hello/' as about_url %}
+        {% url 'django.contrib.flatpages.views.flatpage' url='info/' as about_url %}
         {% url 'post-list' as news_url %}
         {% url 'project-list' as projects_url %}        
        
         <div id="header" class="col_2">
             <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
+            {% block navigation %}
             <div id="navigation">
                 <div class="circle">&nbsp;</div>
                 <div id="menu">
+                    <a href="{{ about_url }}" {% if request.path == about_url %} class="active"{% endif %}>Info</a>
                     {% for project in projects %}
                         {% url 'project-detail' slug=project.slug as project_url %}
                         <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a> -- 
                     {% endfor %}
-                    <a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> -- 
-                    <a href="" {% if request.path == news_url %} class="active"{% endif %}>CV</a>
+                    <!--<a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> -- -->
                 </div>
             </div>
+            {% endblock navigation %}
         </div>
         
         <div id="main">
