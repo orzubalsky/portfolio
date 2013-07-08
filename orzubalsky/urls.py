@@ -50,7 +50,7 @@ urlpatterns += patterns('',
    
 # portfolio app urls
 urlpatterns += patterns('',
-   url(r'^shrimp/', include('portfolio.urls')),
+   url(r'^', include('portfolio.urls')),
 )
 
 
