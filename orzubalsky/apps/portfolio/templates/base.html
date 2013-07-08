@@ -22,10 +22,10 @@
             <div id="navigation">
                 <div class="circle">&nbsp;</div>
                 <div id="menu">
-                    <a href="{{ about_url }}" {% if request.path == about_url %} class="active"{% endif %}>Info</a>
+                    <a href="{{ about_url }}" {% if request.path == about_url %} class="active"{% endif %}>Info</a> -- 
                     {% for project in projects %}
                         {% url 'project-detail' slug=project.slug as project_url %}
-                        <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a> -- 
+                        <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a>{% if not forloop.last %} -- {% endif %}
                     {% endfor %}
                     <!--<a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> -- -->
                 </div>
