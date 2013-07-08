@@ -9,41 +9,41 @@ var Interactions = window.Interactions = new function()
     this.init = function() 
     {
         var self = this;
-        /*
+
+        $('a#shrimp').click(function(e)
+        {
+            e.preventDefault();
+
+            self.move_circle();
+        });
+    };
+    
+    this.random_interaction = function()
+    {
+        var self = this;
+        
         var functions = [
             self.flicker_background,
             self.replace_images_with_llamas,
             self.move_circle,
         ];
-        */
-        $('a#shrimp').click(function(e)
-        {
-            e.preventDefault();
-            /*
-            clearTimeout(self.timeout);
-            clearInterval(self.interval);
-            
-            if(self.move_on == true)
-            {
-                var function_count  = functions.length;
-                var random_index    = Math.floor(Math.random()*function_count);
-                var random_function = functions[random_index];
-            
-                random_function();
-            }
-            else
-            {
-                self.current_function();
-            }
-            */
-        });
+        
+        clearTimeout(self.timeout);
+        clearInterval(self.interval);
+        
+        var function_count  = functions.length;
+        var random_index    = Math.floor(Math.random()*function_count);
+        var random_function = functions[random_index];
+    
+        random_function();     
     };
     
     this.move_circle = function()
     {
         var self = this;
-
-        $('#circle').css({'font-size':'200px'});
+        var position = $('.circle').position();
+        console.log(position);
+        $('.circle').css({'top':(position.top+1)+'px'});
     };
     
     /*  change all of the gallery images on the page to 

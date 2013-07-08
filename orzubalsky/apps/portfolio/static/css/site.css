@@ -66,6 +66,7 @@ a.active,
 }
 #navigation {
     padding-left: 36px;
+    position: relative;
 }
 #navigation > div {
     float: left;
