@@ -8,6 +8,7 @@
     <meta name="description" content="Or Zubalsky is a musician, artist, and programmer working in Brooklyn, NY. He is part of the collectives Fantastic Futures and Trade School. He is interested in sound and platforms for exchange. Or uses Python, Django, javascript, PHP, Arduino, electronics, Max/MSP, and Open Frameworks." />
     <meta name="keywords" content="or zubalsky, fantastic futures, sound, performance, django, geodjango, javascript, physical computing" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/interactions.css" />    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -20,7 +21,7 @@
             <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
             {% block navigation %}
             <div id="navigation">
-                <div class="circle">&nbsp;</div>
+                <a class="circle" id="shrimp" href="">&nbsp;</a>
                 <div id="menu">
                     <a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a> -- 
                     {% for project in projects %}
@@ -37,8 +38,11 @@
             {% block content %}
             {% endblock %}
         </div>
+        
+        <img src="http://tierrapatagonia.files.wordpress.com/2010/08/llama.jpg" class="hidden llama" />
     </div>
     <script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.js"></script>	
+    <script type="text/javascript" src="{{ STATIC_URL }}js/interactions.js"></script>    
     <script type="text/javascript" src="{{ STATIC_URL }}js/site.js"></script>
     {% if settings.GOOGLE_ANALYTICS_KEY %}
     <script>

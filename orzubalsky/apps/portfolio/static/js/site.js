@@ -4,6 +4,7 @@ var site = window.site = new function()
     this.init = function() 
     {
         this.galleries();
+        Interactions.init();
     };
 
 
