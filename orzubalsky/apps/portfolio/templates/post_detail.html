@@ -24,8 +24,9 @@
                 {% endfor %}
                 {% if post.gallery_items_count > 1 %}
                 <div class="controls">
-                    <a class="back" href="">back</a>
-                    <a class="next" href="">next</a>
+                    {% url 'post-detail' slug=post.slug as post_url %}                
+                    <a class="back" href="{{ post_url }}">back</a>
+                    <a class="next" href="{{ post_url }}">next</a>
                 </div>
                 {% endif %}            
             </div>

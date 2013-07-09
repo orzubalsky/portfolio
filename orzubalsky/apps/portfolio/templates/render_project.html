@@ -20,8 +20,9 @@
             {% endfor %}
             {% if project.gallery_items_count > 1 %}
             <div class="controls">
-                <a class="back" href="">back</a>
-                <a class="next" href="">next</a>
+                {% url 'project-detail' slug=project.slug as project_url %}                
+                <a class="back" href="{{ project_url }}">back</a>
+                <a class="next" href="{{ project_url }}">next</a>
             </div>
             {% endif %}            
         </div>
