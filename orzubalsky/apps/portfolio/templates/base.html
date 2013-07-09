@@ -24,6 +24,7 @@
                 <a class="circle" id="shrimp" href="{% url 'home' %}" alt="hello circle">hi!</a>
                 <div id="menu">
                     <a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a> -- 
+                    <a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> ---- 
                     {% for project in projects %}
                         {% url 'project-detail' slug=project.slug as project_url %}
                         <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a>{% if not forloop.last %} -- {% endif %}

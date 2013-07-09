@@ -130,7 +130,7 @@ class Post(Content):
     """
     """
     class Meta:
-        ordering = ['created',]
+        ordering = ['-created',]
     
     projects    = ManyToManyField(Project, blank=True, null=True)
 

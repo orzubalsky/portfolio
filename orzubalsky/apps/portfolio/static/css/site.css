@@ -157,11 +157,14 @@ a.active,
     position: relative;
 }
 .post_list .date {
-    display: inline;
-    margin-right: 20px;
+    display: block;
+    margin: 0;
+    width: 87px;
+    text-align: right;
 }
 .post_list h3 {
-    display: inline;    
+    display: inline;
+    margin-left: 104px;
 }
 .post_list .source_link {
     margin-left: 104px;
@@ -175,4 +178,7 @@ a.active,
     border-bottom: none;
     position: absolute;
     right: 0;
+}
+.info a {
+    border-bottom: none;
 }
