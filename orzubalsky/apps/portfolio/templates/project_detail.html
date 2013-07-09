@@ -2,6 +2,8 @@
 
 {% load render_project %}
 
+{% block title %}{{ block.super }} -- {{ project.name|title }}{% endblock title %}
+
 {% block content %}
 
 {% if project.is_displayed %}

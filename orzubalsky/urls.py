@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.contrib.sitemaps import FlatPageSitemap
+from portfolio.sitemaps import PostSitemap, ProjectSitemap, StaticViewSitemap
 from django.conf import settings
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 from filebrowser.sites import site
@@ -23,6 +25,17 @@ urlpatterns += patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin', include(admin.site.urls)),    
+)
+
+# Sitemaps
+sitemaps = {
+    'flatpages' : FlatPageSitemap,
+    'static'    : StaticViewSitemap,
+    'posts'     : PostSitemap,
+    'projects'  : ProjectSitemap
+}
+urlpatterns += patterns('',
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 )
 
 # tinyMCE editor

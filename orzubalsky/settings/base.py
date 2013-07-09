@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django.contrib.redirects',
+    'django.contrib.sitemaps',
     'grappelli',
     'filebrowser',
     'django.contrib.admin',

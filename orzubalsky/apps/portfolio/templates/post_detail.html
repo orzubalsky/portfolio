@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% block title %}{{ block.super }} -- {{ post.name|title }}{% endblock title %}
+
 <div id="news" class="list col_2">
     {% block post %}
     <div class="post_list">
