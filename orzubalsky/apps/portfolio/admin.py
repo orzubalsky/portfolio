@@ -43,6 +43,12 @@ class ProjectAdmin(BaseAdmin):
 class PostAdmin(BaseAdmin):
     """
     """
+    class Media:
+        js = [
+                settings.STATIC_URL + 'tiny_mce/tiny_mce.js', 
+                settings.STATIC_URL + 'js/tinyMCE_admin.js',
+              ]
+                  
     fieldsets    = (
         ('Info', {
             'fields': ('name', 'content', 'slug', 'source_link', 'projects', 'created', 'is_active')
