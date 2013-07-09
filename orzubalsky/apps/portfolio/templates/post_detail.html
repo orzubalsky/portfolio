@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block title %}{{ block.super|title }} -- {{ post.name|title }}{% endblock title %}
 
-{% block title %}{{ block.super }} -- {{ post.name|title }}{% endblock title %}
+{% block content %}
 
 <div id="news" class="list col_2">
     {% block post %}

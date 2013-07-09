@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>or zubalsky</title>
+    <title>{% block title %}or zubalsky{% endblock title %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Or Zubalsky is a musician, artist, and programmer working in Brooklyn, NY. He is interested in sound, performance, and platforms for exchange." />
     <meta name="keywords" content="or zubalsky, fantastic futures, sound, performance, django, geodjango, javascript, physical computing" />
@@ -18,7 +18,7 @@
         {% url 'project-list' as projects_url %}        
        
         <div id="header" class="col_2">
-            <h1 id="title"><a href="{% url 'home' %}">{% block title %}OR ZUBALSKY{% endblock title %}</a></h1>
+            <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
             {% block navigation %}
             <div id="navigation">
                 <a class="circle" id="shrimp" href="{% url 'home' %}" alt="hello circle">&nbsp;</a>
