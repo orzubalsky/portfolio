@@ -72,6 +72,7 @@ a.active,
     float: left;
 }
 #navigation .circle {
+    text-indent: -9999px;
     display: block;
     float: left;
     margin-right: 40px;
