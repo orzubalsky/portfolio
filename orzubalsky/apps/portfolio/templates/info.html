@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load tagged_projects_link %}
+
 {% block title %}{{ block.super }} -- hello{% endblock title %}
 
 {% block content %}
@@ -11,14 +13,14 @@
 
 <div id="info" class="col_3">
     <p>
-        I'm a programmer, artist, musician, and collaborator. I am a lover of sound, listening, collaboration, open source, questions, language, exchange, walking, and low technology.
+        I'm a programmer, artist, musician, and collaborator. I am a lover of {% tagged_projects_link sound %}, {% tagged_projects_link listening %}, {% tagged_projects_link collaboration %}, open source, questions, {% tagged_projects_link language %}, {% tagged_projects_link exchange %}, walking, and low technology.
         <br />
         I'm also a part of the collectives <a href="{{ fantastic_futures_url }}" title="Fantastic Futures project page">Fantastic Futures</a> and <a href="{{ tradeschool_url }}" title="Trade School project page">Trade School</a>, and music projects <a href="{{ juviley_url }}" alt="Juviley projcet page">Juviley</a> and The Youngest. 
     </p>
     <p>
         I use code to realize the technical aspect of my ideas or those of the groups that I am a part of.
         <br />
-        I work in python, <a href="{{ tradeschool_url }}" title="Trade School Project page">django</a>, <a href="{{ fantastic_futures_url }}" title="Fantastic Futures project page">jQuery</a>, <a href="{{ juviley_url }}" title="Juviley project page">php</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">max/msp</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">arduino</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">openframeworks</a>, and <a href="{{ sound_objects_url }}" title="Sound objects project page">electronics</a> (click on each language to see a project that utilizes it). I particularly enjoy developing platforms for exchange, mapping, interactive, and sound projects.
+        I work in python, {% tagged_projects_link django %}, {% tagged_projects_link jquery %}, {% tagged_projects_link php %}, {% tagged_projects_link maxmsp %}, {% tagged_projects_link arduino %}, {% tagged_projects_link openframeworks %}, and {% tagged_projects_link electronics %} (click on each language to see a project that utilizes it). I particularly enjoy developing platforms for exchange, mapping, interactive, and sound projects.
         <br />
         All of the code for the projects I work on is open source and available on my account on <a target="_blank" href="https://github.com/orzubalsky">github</a>.
     </p>

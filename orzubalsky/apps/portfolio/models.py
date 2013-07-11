@@ -5,6 +5,7 @@ from django.contrib.flatpages.models import FlatPage
 from django.core.urlresolvers import reverse
 from tinymce.models import HTMLField
 from filebrowser.fields import FileBrowseField
+from taggit.managers import TaggableManager      
 import pytz, os
 
 
@@ -124,6 +125,7 @@ class Project(Content):
     credits      = TextField(blank=True, null=True)
     parent       = ForeignKey('self', null=True, blank=True)
     project_link = URLField(blank=True, null=True)
+    tags         = TaggableManager()
 
 
 class Post(Content):

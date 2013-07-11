@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'flatpages_tinymce',
     'south',                        # intelligent schema and data migrations
     'pytz',                         # python timezone library
+    'taggit',                       # tagging app    
     'dajaxice',                     # django ajax app    
     'debug_toolbar',
     'portfolio',                  

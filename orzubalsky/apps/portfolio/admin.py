@@ -31,9 +31,12 @@ class ProjectAdmin(BaseAdmin):
         ('Info', {
             'fields': ('name', 'parent', 'content', 'slug', 'year', 'project_time', 'project_link', 'source_link', 'medium', 'credits', 'position', 'is_displayed', 'is_active')
         }),
+        ('Meta', {
+            'fields': ('tags',)
+        }),        
         ('Media', {
             'fields': ('images', 'sounds', 'videos', 'vimeos', 'documents')
-        }),
+        }),     
     )
     list_display        = ('name', 'parent', 'position', 'is_active') 
     list_editable       = ('position', 'is_active',)
