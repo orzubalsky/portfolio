@@ -4,21 +4,26 @@
 
 {% block content %}
 
-<div class="project">
-    <p class="info col_4">
-        <a target="_blank" href="mailto:orzubalsky@gmail.com">orzubalsky@gmail.com</a><br />
-        <a target="_blank" href="https://github.com/orzubalsky">github</a><br />
-        <a target="_blank" href="http://orzubalsky.com/static/uploads/cv_07_2013.pdf">cv</a>
-    </p>
-    
-    <div class="content col_1">
-        <div class="gallery">
-        </div>
+{% url 'project-detail' slug='fantastic-futures' as fantastic_futures_url %}
+{% url 'project-detail' slug='trade-school' as tradeschool_url %}
+{% url 'project-detail' slug='sound-objects' as sound_objects_url %}
+{% url 'project-detail' slug='juviley' as juviley_url %}
 
-        <div class="description" >
-        </div>
-        
-        <div class="clear">&nbsp;</div>
-    </div>
+<div class="info col_3">
+    <p>
+        I'm a programmer, artist, musician, and collaborator. I am a lover of sound, listening, collaboration, open source, questions, language, exchange, walking, and low technology.
+        <br />
+        I'm also a part of the collectives <a href="{{ fantastic_futures_url }}" title="Fantastic Futures project page">Fantastic Futures</a> and <a href="{{ tradeschool_url }}" title="Trade School project page">Trade School</a>, and music projects <a href="{{ juviley_url }}" alt="Juviley projcet page">Juviley</a> and The Youngest. 
+    </p>
+    <p>
+        I use code to realize the technical aspect of my ideas or those of the groups that I am a part of.
+        <br />
+        I work in python, <a href="{{ tradeschool_url }}" title="Trade School Project page">django</a>, <a href="{{ fantastic_futures_url }}" title="Fantastic Futures project page">jQuery</a>, <a href="{{ juviley_url }}" title="Juviley project page">php</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">max/msp</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">arduino</a>, <a href="{{ sound_objects_url }}" title="Sound objects project page">openframeworks</a>, and <a href="{{ sound_objects_url }}" title="Sound objects project page">electronics</a> (click on each language to see a project that utilizes it). I particularly enjoy developing platforms for exchange, mapping, interactive, and sound projects.
+        <br />
+        All of the code for the projects I work on is open source and available on my account on <a target="_blank" href="https://github.com/orzubalsky">github</a>.
+    </p>
+    <p>
+        Here is my <a target="_blank" href="http://orzubalsky.com/static/uploads/cv_07_2013.pdf">CV</a>. Say hello at <a target="_blank" href="mailto:orzubalsky@gmail.com">orzubalsky@gmail.com</a>
+    </p>    
 </div>
 {% endblock content %}

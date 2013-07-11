@@ -20,7 +20,7 @@
                     <div class="item">{{ vimeo.media|safe }}</div>
                 {% endfor %}
                 {% for image in post.images.all %}
-                    <div class="item"><img src="{{ image.media.url }}" alt="{{ image.media.name }}" /></div>
+                    <div class="item"><img src="{{ image.media.url }}" alt="{{ post.name }} : {{ image.media.name }}" /></div>
                 {% endfor %}
                 {% if post.gallery_items_count > 1 %}
                 <div class="controls">

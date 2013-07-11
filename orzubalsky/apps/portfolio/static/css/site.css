@@ -179,6 +179,6 @@ a.active,
     position: absolute;
     right: 0;
 }
-.info a {
-    border-bottom: none;
+.info {
+    padding-left: 26px;    
 }

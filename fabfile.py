@@ -11,27 +11,27 @@ env.hosts = [ '198.199.64.223', ]
 
 @task
 def update_sourcecode():
-    with cd('/opt/projects/ts/'):
-        sudo('git pull',user='tradeschooler')
+    with cd('/home/theyoungest/webapps/portfolio_production/portfolio'):
+        sudo('git pull',user='orzubalsky')
 
 @task
 def update_project_settings():
     filename = prompt( 'Enter name of local settings file:',
-                       default='ts/settings/server.py' )
-    destination = '/opt/projects/ts/settings/server.py'
+                       default='orzubalsky/settings/server.py' )
+    destination = '/home/theyoungest/webapps/portfolio_production/portfolio/settings/server.py'
     put(filename,destination,use_sudo=True)
-    sudo('chown tradeschooler:webdev %s' % destination)
+    sudo('chown theyoungest:webdev %s' % destination)
 
 @task
 def run_buildout():
-    with cd('/opt/projects/ts/'):
-        sudo('./bin/buildout -c server.cfg',user='tradeschooler')
+    with cd('/home/theyoungest/webapps/portfolio_production/portfolio/'):
+        sudo('./bin/buildout -c server.cfg',user='theyoungest')
 
 @task
 def update_db():
-    with cd('/opt/projects/ts/'):
-        sudo('./bin/django syncdb',user='tradeschooler')
-        sudo('./bin/django migrate',user='tradeschooler')
+    with cd('/home/theyoungest/webapps/portfolio_production/portfolio/'):
+        sudo('./bin/django syncdb',user='theyoungest')
+        sudo('./bin/django migrate',user='theyoungest')
     
 @task
 def update_static_files():
