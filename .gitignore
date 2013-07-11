@@ -10,19 +10,19 @@ eggs/
 parts/
 
 # ignore settings files:
-orzubalsky/settings/development.py
-orzubalsky/settings/server.py
-!orzubalsky/settings/__init__.py
+website/settings/development.py
+website/settings/server.py
+!website/settings/__init__.py
 
 # ignore static files (for now):
-orzubalsky/static/
-orzubalsky/static/uploads
+website/static/
+website/static/uploads
 
 # ignore uploaded files
-orzubalsky/media/uploads
+website/media/uploads
 
 # ignore cache files
 tmp
-orzubalsky/tmp/
+website/tmp/
 
 data.json

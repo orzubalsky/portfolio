@@ -86,7 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'    
 )
 
-ROOT_URLCONF = 'orzubalsky.urls'
+ROOT_URLCONF = 'website.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like '/home/html/django_templates' or 'C:/www/django/templates'.
