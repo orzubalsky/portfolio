@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Or Zubalsky is a programmer, artist, musician, and collaborator. He is a lover of sound, listening, collaboration, open source, questions, language, exchange, and low technology." />
     <meta name="keywords" content="or zubalsky, fantastic futures, sound, collaboration, exchange, listening, performance, django, jquery, arduino, max/msp, physical computing" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/site.css" />
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/interactions.css" />    
     {% block extra_css %}{% endblock %}
@@ -31,22 +32,21 @@
         {% url 'post-list' as news_url %}
         {% url 'project-list' as projects_url %}        
        
-        <div id="header" class="col_2">
-            <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
-            {% block navigation %}
-            <div id="navigation">
-                <a class="circle" id="shrimp" href="{% url 'home' %}" title="hello circle">hi!</a>
-                <div id="menu">
-                    <a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a> -- 
-                    <a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a> ---- 
-                    {% for project in projects %}
-                        {% url 'project-detail' slug=project.slug as project_url %}
-                        <a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name }}</a>{% if not forloop.last %} -- {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            {% endblock navigation %}
+        <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
+        
+        {% block navigation %}
+        <div id="navigation">
+            <ul id="menu">
+                {% for project in projects %}
+                    {% url 'project-detail' slug=project.slug as project_url %}
+                    <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name|title }}</a></li>
+                {% endfor %}
+
+                <li class="category"><a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a></li>
+                <li><a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a></li>
+            </ul>
         </div>
+        {% endblock navigation %}
         
         <div id="main">
             {% block content %}

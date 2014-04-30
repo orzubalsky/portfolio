@@ -1,13 +1,5 @@
 <div class="project">
-    <p class="info col_4">
-        {% if project.name %}<strong>{{ project.name|title }}</strong><br />{% endif %}
-        {% if project.project_time %}{{ project.project_time }}<br />{% endif %}        
-        {% if project.medium %}{{ project.medium }}<br />{% endif %}
-        {% if project.project_link %}<a href="{{ project.project_link }}" target="_blank">{{ project.project_link }}</a><br />{% endif %}
-        {% if project.credits %}{{ project.credits|safe }}<br />{% endif %}        
-    </p>
-    
-    <div class="content col_1">
+    <div class="content">
         <div class="gallery">
             {% for video in project.videos.all %}
                 {{ video.media }}
@@ -26,6 +18,15 @@
             </div>
             {% endif %}            
         </div>
+
+        <p class="info">
+            {% if project.name %}<strong>{{ project.name|title }}</strong><br />{% endif %}
+            {% if project.project_time %}{{ project.project_time }}<br />{% endif %}        
+            {% if project.medium %}{{ project.medium }}<br />{% endif %}
+            {% if project.project_link %}<a href="{{ project.project_link }}" target="_blank">{{ project.project_link }}</a><br />{% endif %}
+            {% if project.credits %}{{ project.credits|safe }}<br />{% endif %}        
+        </p>
+
 
         <div class="description" >
             {{ project.content|safe }}
