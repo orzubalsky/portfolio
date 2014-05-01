@@ -32,20 +32,21 @@
         {% url 'post-list' as news_url %}
         {% url 'project-list' as projects_url %}        
        
-        <h1 id="title"><a href="{% url 'home' %}">OR ZUBALSKY</a></h1>
-        
         {% block navigation %}
-        <div id="navigation">
-            <ul id="menu">
-                {% for project in projects %}
-                    {% url 'project-detail' slug=project.slug as project_url %}
-                    <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name|title }}</a></li>
-                {% endfor %}
+        <h1 id="title">
+            <a href="{% url 'home' %}">OR ZUBALSKY</a>
+            <div id="navigation">
+                <ul id="menu">
+                    {% for project in projects %}
+                        {% url 'project-detail' slug=project.slug as project_url %}
+                        <li><a href="{{ project_url }}" {% if request.path == project_url %} class="active"{% endif %}>{{ project.name|title }}</a></li>
+                    {% endfor %}
 
-                <li class="category"><a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a></li>
-                <li><a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a></li>
-            </ul>
-        </div>
+                    <li class="category"><a href="{{ news_url }}" {% if request.path == news_url %} class="active"{% endif %}>News</a></li>
+                    <li><a href="{{ info_url }}" {% if request.path == info_url %} class="active"{% endif %}>Info</a></li>
+                </ul>
+            </div>            
+        </h1>
         {% endblock navigation %}
         
         <div id="main">
