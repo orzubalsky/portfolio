@@ -12,15 +12,18 @@ body {
     margin: 0;
     padding:0;
     line-height: 1.5;
+    color: #ae0a00;
+    background-color: #eee;
 }
 a {
     cursor: pointer;
     padding-bottom: 0px;
-    color: black;
+    color: #ae0a00;
     text-decoration: underline;
 }
 a:hover {
     text-decoration: underline;
+    color: black;
 }
 ul {
     list-style: none;
@@ -73,7 +76,7 @@ a.active,
     top: 24px;
     left: 30px;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(238, 238, 238, 0.9);
 }
 #title > a {
     font-weight: bold;
