@@ -78,7 +78,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',    
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -123,12 +122,10 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.flatpages',
     'tinymce',
-    'flatpages_tinymce',
     'south',                        # intelligent schema and data migrations
     'pytz',                         # python timezone library
     'taggit',                       # tagging app    
     'dajaxice',                     # django ajax app    
-    'debug_toolbar',
     'portfolio',                  
 )
 
@@ -173,22 +170,6 @@ LOGGING = {
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': 'table,spellchecker,paste,searchreplace',
     'theme': 'advanced',
-}
-
-DEBUG_TOOLBAR_PANELS = (
-    'debug_toolbar.panels.version.VersionDebugPanel',
-    'debug_toolbar.panels.timer.TimerDebugPanel',
-    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    'debug_toolbar.panels.headers.HeaderDebugPanel',
-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    'debug_toolbar.panels.template.TemplateDebugPanel',
-    'debug_toolbar.panels.sql.SQLDebugPanel',
-    'debug_toolbar.panels.signals.SignalDebugPanel',
-    'debug_toolbar.panels.logger.LoggingPanel',
-)
-
-DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': False,
 }
 
 FILEBROWSER_VERSIONS = {
