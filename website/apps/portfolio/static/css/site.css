@@ -12,12 +12,12 @@ body {
     margin: 0;
     padding:0;
     line-height: 1.5;
-    color: #ae0a00;
+    color: black;
 }
 a {
     cursor: pointer;
     padding-bottom: 0px;
-    color: #ae0a00;
+    color: black;
     text-decoration: underline;
 }
 a:hover {

@@ -76,7 +76,7 @@ class Content(Base):
         abstract = True
       
     name         = CharField(max_length=140)
-    content      = HTMLField(null=True, blank=True)
+    content      = TextField(null=True, blank=True)
     slug         = SlugField(max_length=160)
     images       = ManyToManyField(Image, blank=True, null=True)
     sounds       = ManyToManyField(Sound, blank=True, null=True)
