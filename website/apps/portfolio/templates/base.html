@@ -30,12 +30,12 @@
     <div id="container">
         {% url 'info' as info_url %}
         {% url 'post-list' as news_url %}
-        {% url 'project-list' as projects_url %}        
-       
+        {% url 'home' as home %}
+
         {% block navigation %}
         <h1 id="title">
             <a href="{% url 'home' %}">OR ZUBALSKY</a>
-            <div id="navigation">
+            <div id="navigation" {% if request.path == home %} class="active"{% endif %}>
                 <ul id="menu">
                     {% for project in projects %}
                         {% url 'project-detail' slug=project.slug as project_url %}
