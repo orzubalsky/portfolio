@@ -155,6 +155,7 @@ a.active,
 }
 .gallery .controls a {
     border-bottom: none;
+    text-decoration: none;
 }
 .description {
     width: 440px;
