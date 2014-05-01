@@ -140,6 +140,9 @@ a.active,
     width: 100%;
     position: absolute;
 }
+.gallery#meeting-table .controls {
+    right: 200px;
+}
 .gallery .controls {
     position: absolute;
     right: 0;
