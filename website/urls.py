@@ -24,7 +24,6 @@ urlpatterns += patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin', include(admin.site.urls)),    
 )
 
 # Sitemaps
@@ -63,7 +62,8 @@ urlpatterns += patterns('',
    
 # portfolio app urls
 urlpatterns += patterns('',
-   url(r'^', include('portfolio.urls')),
+    url(r'sample/', include('samples.urls')),
+    url(r'^', include('portfolio.urls')),
 )
 
 

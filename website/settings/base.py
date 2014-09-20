@@ -92,6 +92,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     PROJECT_DIR + '/apps/portfolio/templates',
+    PROJECT_DIR + '/apps/samples/templates',
 )
 
 FIXTURE_DIRS = (
@@ -126,7 +127,8 @@ INSTALLED_APPS = (
     'pytz',                         # python timezone library
     'taggit',                       # tagging app    
     'dajaxice',                     # django ajax app    
-    'portfolio',                  
+    'portfolio',
+    'samples',
 )
 
 # A sample logging configuration. The only tangible logging
