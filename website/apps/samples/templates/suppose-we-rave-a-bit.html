@@ -1,0 +1,38 @@
+{% extends "top-bar-layout.html" %}
+
+{% block title %}
+Suppose We Rave a Bit
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/meeting-table.css">
+{% endblock extra_css %}
+
+
+{% block info %}
+<h1>SUPPOSE WE RAVE A BIT</h1>
+<p class="credits">
+    Or Zubalsky &amp; Christhian Diaz, 2015.
+</p>
+{% endblock info %}
+
+{% block media %}
+<div class="js-video vimeo widescreen">
+	<iframe src="//player.vimeo.com/video/120765137" width="1200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<div class="js-video vimeo widescreen">
+	<iframe src="//player.vimeo.com/video/120766381" width="1200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<div class="js-video vimeo widescreen">
+	<iframe src="//player.vimeo.com/video/120761976" width="1200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<div class="js-video vimeo widescreen">
+	<iframe src="//player.vimeo.com/video/120884060" width="1200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<div class="js-video vimeo widescreen">
+	<iframe src="//player.vimeo.com/video/120766999" width="1200" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+{% endblock media %}
+
+{% block extra_js %}
+{% endblock extra_js %}

@@ -20,9 +20,9 @@ USE_TZ = True
 
 PROJECT_DIR = os.path.dirname(__file__) + '/..'
 
-sys.path.append(os.path.dirname(PROJECT_DIR))    
+sys.path.append(os.path.dirname(PROJECT_DIR))
 sys.path.append(PROJECT_DIR)
-sys.path.append(os.path.join(PROJECT_DIR, 'apps'))                      
+sys.path.append(os.path.join(PROJECT_DIR, 'apps'))
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -39,7 +39,7 @@ STATICFILES_DIRS = (
     # Put strings here, like '/home/html/static' or 'C:/www/django/static'.
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_DIR, 'static/'), 
+    os.path.join(PROJECT_DIR, 'static/'),
 )
 
 # List of finder classes that know how to find static files in
@@ -82,7 +82,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'    
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
 )
 
 ROOT_URLCONF = 'website.urls'
@@ -96,7 +96,7 @@ TEMPLATE_DIRS = (
 )
 
 FIXTURE_DIRS = (
-   PROJECT_DIR + '/apps/portfolio/fixtures',   
+   PROJECT_DIR + '/apps/portfolio/fixtures',
 )
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
@@ -125,8 +125,8 @@ INSTALLED_APPS = (
     'tinymce',
     'south',                        # intelligent schema and data migrations
     'pytz',                         # python timezone library
-    'taggit',                       # tagging app    
-    'dajaxice',                     # django ajax app    
+    'taggit',                       # tagging app
+    'dajaxice',                     # django ajax app
     'portfolio',
     'samples',
 )
@@ -153,7 +153,7 @@ LOGGING = {
         'console':{
             'level':'DEBUG',
             'class':'logging.StreamHandler'
-        },        
+        },
     },
     'loggers': {
         'django.request': {
@@ -165,7 +165,7 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'ERROR',
             'propagate': True,
-        },        
+        },
     }
 }
 
