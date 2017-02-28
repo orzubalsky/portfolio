@@ -1,0 +1,38 @@
+{% extends "top-bar-layout.html" %}
+
+{% block title %}
+Images
+{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/images.css">
+{% endblock extra_css %}
+
+
+{% block info %}
+{% endblock info %}
+
+{% block media %}
+<div class='item'>
+	<img class='image' src="{{ STATIC_URL }}images/the-future-is-fantastic/03.jpg" />
+	<p class='caption'>
+		<span class='title'>The Future is Fantastic (If You Want It)</span><br />
+		Collaboration with Fantastic Futures<br />
+		2012<br />
+		11 channel sound performance<br />
+	</p>
+</div>
+
+<div class='item'>
+	<img class='image' src="{{ STATIC_URL }}images/the-future-is-fantastic/06.jpg" />
+	<p class='caption'>
+		<span class='title'>The Future is Fantastic (If You Want It)</span><br />
+		Collaboration with Fantastic Futures<br />
+		2012<br />
+		11 channel sound performance<br />
+	</p>
+</div>
+{% endblock media %}
+
+{% block extra_js %}
+{% endblock extra_js %}
