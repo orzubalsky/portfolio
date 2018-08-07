@@ -1,0 +1,51 @@
+@import 'base';
+
+.Assignment {
+  background: #eee;
+  padding: 1rem;
+
+  @include for-tablet-portrait-up {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+.Assignment__title,
+.Assignment__content {
+  @include for-tablet-portrait-up {
+    display: flex;
+    flex-direction: columns;
+  }
+
+  > div:nth-child(2n) {
+    margin: 0;
+  }
+}
+
+.Assignment__names,
+.Assignment__code,
+.Assignment__goals,
+.Assignment__considerations {
+  margin: 0 0 1rem 0;
+
+  @include for-tablet-portrait-up {
+    margin: 0 1rem 0 0;
+    width: calc(50% - 0.5rem);
+  }
+
+  h5 {
+    font-weight: 400;
+  }
+
+  ul {
+    padding: 0 0 0 1rem;
+  }
+}
+
+.Assignment__name,
+.Assignment__student {
+}
+
+.Assignment__description {
+  max-width: 40rem;
+}

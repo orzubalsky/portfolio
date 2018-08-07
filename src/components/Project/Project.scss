@@ -1,0 +1,122 @@
+@import 'base';
+
+.Project > p {
+  padding: 0 0 0 1rem;
+
+  @include for-tablet-landscape-up {
+    padding: 0 10rem 0 2rem;
+  }
+}
+
+.Project > img {
+  padding: 0 0 0 1rem;
+}
+
+.meta {
+  margin: 0 0 2rem;
+}
+
+.embed {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+img {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  object-fit: cover;
+
+  @include for-tablet-portrait-up {
+  }
+
+  @include for-tablet-landscape-up {
+  }
+}
+
+.Project > img.inline {
+  @include for-tablet-landscape-up {
+    padding: 0;
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+    height: 55vh;
+  }
+}
+
+.events {
+
+  .date {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.coalitions {
+  img {
+    margin: 0 0 10rem 0;
+  }
+
+  .coalitions-04 {
+    width: 50%;
+    text-align: center;
+    margin: 10rem auto 1rem;
+  }
+}
+
+.draft {
+  section {
+    margin: 0 0 10rem;
+  }
+
+  .time-travels-01 {
+    margin: 0 0 4rem;
+  }
+
+  .draft-02 {
+    margin: 12rem auto 4rem;
+    width: 40%;
+  }
+}
+
+.add-margin-bottom {
+  margin: 0 0 4rem;
+}
+
+.meeting-table {
+  .add-margin-bottom {
+    margin: 0 0 4rem;
+  }
+}
+
+
+.suppose-image-1 {
+  margin-top: 6rem;
+}
+
+.suppose-image {
+  width: 50%;
+  margin: 10rem auto 10rem;
+}
+
+.suppose-image-mask {
+  width: 25%;
+}
+
+.portraits-of-flowers-2 {
+  margin-top: 6rem;
+}
+
+.portraits-of-flowers {
+  width: 50%;
+  margin: 10rem auto 10rem;
+}

@@ -1,0 +1,40 @@
+@import 'base';
+
+.SyllabusItem,
+.Section .SyllabusItem {
+  height: auto;
+  padding: 1rem 4rem 1rem 1rem;
+  margin: 0 0 1rem;
+  background: #eee;
+  position: relative;
+
+  &:hover {
+    i {
+      color: #333;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    margin: 0 1rem 1rem 0;
+
+    &:nth-child(2n) {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  i {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 1.4rem;
+    color: #aaa;
+  }
+
+  &.SyllabusItem--inactive {
+    cursor: default;
+  }
+}

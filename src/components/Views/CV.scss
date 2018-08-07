@@ -1,0 +1,24 @@
+.Cv {
+  section {
+    margin: 0 0 3rem;
+  }
+
+  li {
+    position: relative;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+  }
+
+  .label {
+    position: absolute;
+    left: 0;
+  }
+
+  .value {
+    position: relative;
+    padding-left: 7rem;
+    display: block;
+  }
+}
