@@ -33,9 +33,9 @@ export const TeachingPortfolio = () => (
     </Section>
     <Section title='Syllabi' className='Syllabi'>
       <SyllabusItem title='Creative Computing' link='http://orzubalsky.com/static/syllabi/PUCD_2035_D_ZUBALSKY_FA17.pdf' />
-      <SyllabusItem title='Core Studio Interaction' link='http://orzubalsky.com/static/syllabi/PUCD_2035_D_ZUBALSKY_FA17.pdf' />
+      <SyllabusItem title='Core Studio Interaction' link='http://orzubalsky.com/static/syllabi/PUCD_2125_J_ZUBALSKY_SP18.pdf' />
       <SyllabusItem title='Integrated Studio 1: Avatar' isActive={false} />
-      <SyllabusItem title='Integrated Studio 2: Systems and Strategies' link='http://orzubalsky.com/static/syllabi/PUCD_2035_D_ZUBALSKY_FA17.pdf' />
+      <SyllabusItem title='Integrated Studio 2: Systems and Strategies' link='http://orzubalsky.com/static/syllabi/PUFY_1001_A10_ZUBALSKY_SP18.pdf' />
     </Section>
   </div>
 )
