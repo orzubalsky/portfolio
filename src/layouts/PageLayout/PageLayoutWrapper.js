@@ -11,6 +11,7 @@ import HomeView from 'components/Views/HomeView'
 import TeachingView from 'components/Views/TeachingView'
 import CV from 'components/Views/CV'
 import Coalitions from 'components/Project/Coalitions'
+import DrumMold from 'components/Project/DrumMold'
 import FantasticFutures from 'components/Project/FantasticFutures'
 import PortraitsOfFlowers from 'components/Project/PortraitsOfFlowers'
 import HowDoYouSingIt from 'components/Project/HowDoYouSingIt'
@@ -21,6 +22,10 @@ import MeetingTable from 'components/Project/MeetingTable'
 import StudyCollaboration from 'components/Project/StudyCollaboration'
 import TheSilentPeriod from 'components/Project/TheSilentPeriod'
 import TradeSchool from 'components/Project/TradeSchool'
+import HeartCircuit from 'components/Project/HeartCircuit'
+import WindCircuit from 'components/Project/WindCircuit'
+import Synth from 'components/Project/Synth'
+import MarxForCats from 'components/Project/MarxForCats'
 import './PageLayout.scss'
 
 const mapDispatchToProps = {
@@ -91,14 +96,14 @@ export class PageLayoutWrapper extends React.Component {
                 <ul className='sublist'>
                   <NavLink name='Coalitions' slug='coalitions' />
                   <NavLink
+                    name='Time Travels: Building a State in the Middle East'
+                    slug='time-travels-building-a-state-in-the-middle-east'
+                  />                  
+                  <NavLink
                     name='How Will You Write it in a Sentence? How Will You Sing it?'
                     slug='how-will-you-write-it-in-a-sentence-how-will-you-sing-it'
                     />
                   <NavLink name='Portraits of Flowers Before Oslo, 1992' slug='portraits-of-flowers-before-oslo-1992' />
-                  <NavLink
-                    name='Time Travels: Building a State in the Middle East'
-                    slug='time-travels-building-a-state-in-the-middle-east'
-                  />
                   <NavLink name='Suppose We Rave a Bit' slug='suppose-we-rave-a-bit' />
                   <NavLink name='Meeting Table' slug='meeting-table' />
                   <NavLink name='The Silent Period' slug='the-silent-period' />
@@ -107,12 +112,22 @@ export class PageLayoutWrapper extends React.Component {
               <li className='nav__item'>
                 <h2 className='nav__header'>Platforms</h2>
                 <ul className='sublist'>
+                  <NavLink name='Marx for Cats' slug='marx-for-cats' />
                   <NavLink name='Study Collaboration' slug='study-collaboration' />
                   <NavLink name='Invisible Library' slug='invisible-library' />
                   <NavLink name='Fantastic Futures' slug='fantastic-futures' />
                   <NavLink name='Trade School' slug='trade-school' />
                 </ul>
               </li>
+              <li className='nav__item'>
+                <h2 className='nav__header'>Tools</h2>
+                <ul className='sublist'>
+                  <NavLink name='Mold for Marching Drum' slug='mold-for-marching-drum' />
+                  <NavLink name='Circuit for Voice and Wind' slug='circuit-for-voice-and-wind' />
+                  <NavLink name='Circuit for Listening to the Heart' slug='circuit-for-listening-to-the-heart' />
+                  <NavLink name='Spoken Synth' slug='spoken-synth' />
+                </ul>
+              </li>              
               <li className='nav__item'>
                 <h2 className='nav__header'>
                   <Link to='/cv' onClick={this.closeNav} >CV</Link>
@@ -136,6 +151,11 @@ export class PageLayoutWrapper extends React.Component {
           <PageLayout exact path='/project/study-collaboration' Component={StudyCollaboration} />
           <PageLayout exact path='/project/the-silent-period' Component={TheSilentPeriod} />
           <PageLayout exact path='/project/trade-school' Component={TradeSchool} />
+          <PageLayout exact path='/project/mold-for-marching-drum' Component={DrumMold} />
+          <PageLayout exact path='/project/circuit-for-listening-to-the-heart' Component={HeartCircuit} />
+          <PageLayout exact path='/project/circuit-for-voice-and-wind' Component={WindCircuit} />
+          <PageLayout exact path='/project/spoken-synth' Component={Synth} />
+          <PageLayout exact path='/project/marx-for-cats' Component={MarxForCats} />
         </main>
       </div>
     )

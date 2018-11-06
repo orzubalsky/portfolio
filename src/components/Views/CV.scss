@@ -3,8 +3,14 @@
     margin: 0 0 3rem;
   }
 
+  ul {
+    padding: 0;
+  }
+  
   li {
     position: relative;
+    list-style: none;
+    margin: 0;
   }
 
   h2 {

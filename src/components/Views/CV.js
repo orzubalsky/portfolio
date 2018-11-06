@@ -24,9 +24,9 @@ export const CV = () => (
       </h2>
       <ul>
         <li>
-          <span className='label'>2014-2018</span>
-          <span className='value'>The Rude Mechanical Orchestra. Member in the radical protest marching band.</span>
-        </li>
+          <span className='label'>2018</span>
+          <span className='value'>Marx for Cats, video lecture series and online surveillence platform.</span>
+        </li>        
         <li>
           <span className='label'>2011-2015</span>
           <span className='value'>Trade School Everywhere. Self organized education network and online platform.</span>
@@ -44,7 +44,7 @@ export const CV = () => (
       <ul>
         <li>
           <span className='label'>2018</span>
-          <span className='value'>What We Make, with Huong Ngo, Ross Art Museum, Delaware, OH. (forthcoming)</span>
+          <span className='value'>What We Make, with Huong Ngo, Ross Art Museum, Delaware, OH.</span>
         </li>
         <li>
           <span className='label'></span>
@@ -162,6 +162,10 @@ export const CV = () => (
       <ul>
         <li>
           <span className='label'>2018</span>
+          <span className='value'>Panel on identity, Nova Frontier Film Festival, Brooklyn, NY.</span>
+        </li>        
+        <li>
+          <span className='label'></span>
           <span className='value'>The Nakba of His Inauguration, The Overlook Place, Chicago, IL.</span>
         </li>
         <li>

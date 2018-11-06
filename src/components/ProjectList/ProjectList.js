@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from 'components/Section/Section'
 import coalitionsImage from 'static/coalitions.jpg'
-import draftImage from 'static/draft.jpg'
+import draftImage from 'static/time-travels/table_1600_02.jpg'
 import meetingTableImage from 'static/meeting-table.jpg'
 import theSilentPeriodImage from 'static/the-silent-period.jpg'
 import howDoYouSingItImage from 'static/how-do-you-sing-it.jpg'
@@ -15,6 +15,10 @@ export const ProjectList = () => (
       <img src={coalitionsImage} />
       <h3>Coalitions</h3>
     </Link>
+    <Link to='/project/time-travels-building-a-state-in-the-middle-east'>
+      <img src={draftImage} />
+      <h3>Time Travels: Building a State in the Middle East</h3>
+    </Link>    
     <Link to='/project/how-will-you-write-it-in-a-sentence-how-will-you-sing-it'>
       <img src={howDoYouSingItImage} />
       <h3>How Will You Write it in a Sentence? How Will You Sing it?</h3>
@@ -22,10 +26,6 @@ export const ProjectList = () => (
     <Link to='/project/portraits-of-flowers-before-oslo-1992'>
       <img src={portraitsOfFlowersImage} />
       <h3>Portraits of Flowers Before Oslo, 1992</h3>
-    </Link>
-    <Link to='/project/time-travels-building-a-state-in-the-middle-east'>
-      <img src={draftImage} />
-      <h3>Time Travels: Building a State in the Middle East</h3>
     </Link>
     <Link to='/project/suppose-we-rave-a-bit'>
       <img src={supposeWeRaveABitImage} />

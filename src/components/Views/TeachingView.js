@@ -1,6 +1,7 @@
 import React from 'react'
 import About from 'components/About/About'
 import PlatformList from 'components/PlatformList/PlatformList'
+import ToolList from 'components/ToolList/ToolList'
 import ProjectList from 'components/ProjectList/ProjectList'
 import TeachingPortfolio from 'components/TeachingPortfolio/TeachingPortfolio'
 import Contact from 'components/Contact/Contact'
@@ -11,6 +12,7 @@ export const TeachingView = () => (
     <About />
     <TeachingPortfolio />
     <PlatformList />
+    <ToolList />
     <ProjectList />
     <Contact />
   </div>

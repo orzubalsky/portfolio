@@ -90,6 +90,34 @@ a {
   display: none;
 }
 
+pre {
+  margin: 0 0 2rem;
+}
+
+.hljs {
+  font-size:  0.8rem;
+  line-height: 1.4;
+  padding: 1rem;
+  border: 1px solid #c2c2c2;
+  background: transparent;
+
+  &::-webkit-scrollbar
+  {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track
+  {
+    background: hsla( 0, 0, 90, 1);
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background: hsla(0, 0, 70, 1);
+  }
+}
+
 @media print {
   .print {
     display: inline-block;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import image01 from 'static/coalitions/coalitions_01.jpg'
 import image02 from 'static/coalitions/coalitions_02.jpg'
 import image03 from 'static/coalitions/coalitions_03.jpg'
@@ -13,6 +14,9 @@ export const Coalitions = () => (
         2017<br />
         Poplar, polyester film, polyester rope, graphite, digital print
       </p>
+      <ul className='add-margin-bottom related'>
+        <li><span>Related tool: </span><Link to='mold-for-marching-drum'>Mold for Marching Drum</Link></li>
+      </ul>        
       <img className='coalitions-01' src={image01} />
       <img className='coalitions-02' src={image02} />
       <img className='coalitions-03' src={image03} />

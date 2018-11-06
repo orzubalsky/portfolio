@@ -5,10 +5,15 @@ import fantasticFuturesImage from 'static/fantastic-futures.jpg'
 import invisibleLibraryImage from 'static/invisible-library.jpg'
 import studyCollaborationImage from 'static/study-collaboration.jpg'
 import tradeSchoolImage from 'static/trade-school.jpg'
+import marxForCatsImage from 'static/marx-for-cats.png'
 import './PlatformList.scss'
 
 export const PlatformList = () => (
   <Section title='Platforms'>
+    <Link to='/project/marx-for-cats'>
+      <img src={marxForCatsImage} />
+      <h3>Marx for Cats</h3>
+    </Link>  
     <Link to='/project/study-collaboration'>
       <img src={studyCollaborationImage} />
       <h3>Study Collaboration</h3>

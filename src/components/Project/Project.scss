@@ -65,12 +65,13 @@ img {
   img {
     margin: 0 0 10rem 0;
   }
+}
 
-  .coalitions-04 {
-    width: 50%;
-    text-align: center;
-    margin: 10rem auto 1rem;
-  }
+.coalitions-04,
+.small-image {
+  width: 50%;
+  text-align: center;
+  margin: 10rem auto 1rem;
 }
 
 .draft {
@@ -119,4 +120,29 @@ img {
 .portraits-of-flowers {
   width: 50%;
   margin: 10rem auto 10rem;
+}
+
+.drum-mold-01,
+.drum-mold-02 {
+  width: calc(50% - 0.5rem);
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+}
+
+.drum-mold-02 {
+  margin: 0 0 1rem;
+}
+
+.time-travels-cover {
+  margin: 0 0 1rem 0;
+}
+
+.related {
+  a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    font-weight: 100;
+  }
 }
