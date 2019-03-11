@@ -10,6 +10,7 @@ import PageLayout from 'layouts/PageLayout'
 import HomeView from 'components/Views/HomeView'
 import TeachingView from 'components/Views/TeachingView'
 import CV from 'components/Views/CV'
+import RequestDeferred from 'components/Project/RequestDeferred'
 import Coalitions from 'components/Project/Coalitions'
 import DrumMold from 'components/Project/DrumMold'
 import FantasticFutures from 'components/Project/FantasticFutures'
@@ -94,6 +95,7 @@ export class PageLayoutWrapper extends React.Component {
               <li className='nav__item'>
                 <h2 className='nav__header'>Projects</h2>
                 <ul className='sublist'>
+                  <NavLink name='Request Deferred' slug='request-deferred' />
                   <NavLink name='Coalitions' slug='coalitions' />
                   <NavLink
                     name='Time Travels: Building a State in the Middle East'
@@ -140,6 +142,7 @@ export class PageLayoutWrapper extends React.Component {
           <PageLayout exact path='/' Component={HomeView} />
           <PageLayout exact path='/cv' Component={CV} />
           <PageLayout exact path='/teaching' Component={TeachingView} />
+          <PageLayout exact path='/project/request-deferred' Component={RequestDeferred} />
           <PageLayout exact path='/project/coalitions' Component={Coalitions} />
           <PageLayout exact path='/project/fantastic-futures' Component={FantasticFutures} />
           <PageLayout exact path='/project/portraits-of-flowers-before-oslo-1992' Component={PortraitsOfFlowers} />

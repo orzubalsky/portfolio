@@ -26,7 +26,7 @@ export const CV = () => (
         <li>
           <span className='label'>2018</span>
           <span className='value'>Marx for Cats, video lecture series and online surveillence platform.</span>
-        </li>        
+        </li>
         <li>
           <span className='label'>2011-2015</span>
           <span className='value'>Trade School Everywhere. Self organized education network and online platform.</span>
@@ -42,6 +42,10 @@ export const CV = () => (
           Exhibitions
       </h2>
       <ul>
+      <li>
+          <span className='label'>2019</span>
+          <span className='value'>The Body Responds By Lying Down, NARS Foundation, Brooklyn, NY.</span>
+        </li>
         <li>
           <span className='label'>2018</span>
           <span className='value'>What We Make, with Huong Ngo, Ross Art Museum, Delaware, OH.</span>
@@ -163,7 +167,7 @@ export const CV = () => (
         <li>
           <span className='label'>2018</span>
           <span className='value'>Panel on identity, Nova Frontier Film Festival, Brooklyn, NY.</span>
-        </li>        
+        </li>
         <li>
           <span className='label'></span>
           <span className='value'>The Nakba of His Inauguration, The Overlook Place, Chicago, IL.</span>
